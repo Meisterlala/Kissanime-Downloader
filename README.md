@@ -1,2 +1,3 @@
-# Kissanime-Downloader
-Kissanime Downloader using JDownloader 2
+# Kissanime Downloader
+Download an entire anime series with just one button press.
+
