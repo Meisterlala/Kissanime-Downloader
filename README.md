@@ -29,8 +29,8 @@ Download an entire anime series with just a few button presses. Supports many di
 ###### 1. Visit [KissAnime.to][kissanime]
 ###### 2. Click on **Download with JDownloader**
 ###### 3. Start JDownloader 2 and enable the [Clipboard Observer](http://jdownloader.org/knowledge/wiki/gui/mainpanel#enabledisable-clipboard-observer)
-###### 4. Wait ca. 7s for each episode that has to load
-###### 5. Right-click your chosen quality and start the downloads
+###### 4. Wait about 7s for each episode that has to be loaded
+###### 5. Right-click on your chosen quality and start the downloads
 
 [JDownloader]: http://jdownloader.org/download/index
 [Greasemonkey]: https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/
