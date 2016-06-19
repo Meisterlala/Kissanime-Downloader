@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Kissanime Jdownloader?
-// @namespace    http://kissanime.com/
-// @version      0.1
+// @name         Kissanime Downloader with Jdownloader
+// @namespace    https://github.com/Meisterlala/Kissanime-Downloader
+// @version      v1
 // @description  Adds Download Button
-// @author       You
+// @author       Meisterlala
 // @include      */kissanime.*/Anime/*
 // @exclude      */kissanime.*/Anime/*/*
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
@@ -48,62 +48,59 @@ function main() {
 
 
 
-var appendedHTML = `
-
-    <div id="newbody"><div id="myContainer">           
-                      
+var appendedHTML = `          
+    
+    <div id="myButtonContainer">
     <button id="myButton" type="button">
     Download with JDownloader
-    </button>    
-                                                     
-    </div></div>   
-
+    </button>           
+    </div>
+    
 `;
-$("body").append(appendedHTML);
-GM_addStyle(`
 
-	#newbody {
-	   position: 				absolute;	
-	   top: 					240PX;
-	   text-align: 			    center;	
-       width:                   100%;
+$("div.bigBarContainer:nth-child(1) > div:nth-child(2) > div:nth-child(2)").append(appendedHTML);
 
-	}
-    #myContainer {
-		position: 				relative;
-        margin-left:            auto;
-        margin-right:           auto;
-        opacity:                1;
-        width: 					970px; 
-        text-align:             right;
-    }
+var maincolor = $("div.bigBarContainer:nth-child(1) > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) > a:nth-child(2)").css("color")
+var cssstyle = `
+
+
     #myButton {
         z-index:                222;
-        color:                  #72D572;
         cursor:                 pointer;
-        position: 				relative;
+        position:               relative;
         margin-right:           15px;
         font-size:              18px;
         background-color:       transparent;
         outline:                none;
         border:                 none;
-		display: 				inline-block;
-		text-decoration: 		none;
+        display:                inline-block;
+        text-decoration:        none;
         font:                   normal 27px "Tahoma" , Arial, Helvetica, sans-serif;
-		transition-duration: 	0.4s;
-		border-radius: 			4px;
+        transition-duration:    0.4s;
+        border-radius:          4px;
+		` + "color:                  " + maincolor +`
     }
-	#myButton:hover {
-		background-color: 		#72D572; 
-		color: 					black;
-		
-	}
+    #myButton:hover {
+        color:                  black;
+        ` + "background-color:       " + maincolor +`       
+    }
+    #myButtonContainer {
+        
+        text-align:             center;
+        
+    }
+	`
 	
-`);
+GM_addStyle(cssstyle);
 
 
 
-//--- Activate the newly added button.
+
+// $("#myButton").css("color", maincolor)
+// $("#myButton:hover").css("background-color:", maincolor)
+
+
+// Activate the added button
 document.getElementById("myButton").addEventListener (
     "click", ButtonClickAction, false
 );
@@ -111,13 +108,6 @@ document.getElementById("myButton").addEventListener (
 function ButtonClickAction (zEvent) {
     main();    
 }
-
-
-
-
-// load jQuery and execute the main function
-
-//Anime/Kaze-no-Stigma-Sub/Episode-023?id=88558
 
 
 
