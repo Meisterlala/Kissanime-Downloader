@@ -5,7 +5,7 @@ Download an entire anime series with just a few button presses. Supports many di
 # Installation
 ###### 1. Download [JDownloader 2][JDownloader] and install it
 ###### 2. Install [Greasemonkey][Greasemonkey] for Firefox or [Tampermonkey][Tampermonkey] for Chrome
-###### 3. Install [the userscript][main.js]
+###### 3. Install the userscript from [GitHub][main.js] or [Greasyfork][Greasyfork]
 ###### 4. Download and import JDownloader [packagizer][.packagizer] (right-click -> Save Link As...) and change the download directory
 4.0. Step 4 is optional, but highly recommended   
 4.1. Open the settings  
@@ -38,4 +38,4 @@ Download an entire anime series with just a few button presses. Supports many di
 [main.js]: ../../raw/master/Kissanime-Downloader.user.js
 [.packagizer]: ../../raw/master/Kissanime-Downloader.packagizer
 [kissanime]: http://kissanime.to/
-
+[greasyfork]: https://greasyfork.org/scripts/20724-kissanime-downloader-with-jdownloader/code/Kissanime%20Downloader%20with%20Jdownloader.user.js
