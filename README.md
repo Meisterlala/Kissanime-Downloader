@@ -26,7 +26,7 @@ Download an entire anime series with just a few button presses. Supports many di
 </p>
 ![packagizer](https://cloud.githubusercontent.com/assets/6453306/16174827/24d95554-35d6-11e6-9929-9aba4f89a37b.gif)
 # Usage
-###### 1. Visit [KissAnime.to][kissanime]
+###### 1. Visit [KissAnime.ru][kissanime]
 ###### 2. Click on **Download with JDownloader**
 ###### 3. Start JDownloader 2 and enable the [Clipboard Observer](http://jdownloader.org/knowledge/wiki/gui/mainpanel#enabledisable-clipboard-observer)
 ###### 4. Wait about 7s for each episode that has to be loaded
@@ -37,5 +37,5 @@ Download an entire anime series with just a few button presses. Supports many di
 [Tampermonkey]: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
 [main.js]: ../../raw/master/Kissanime-Downloader.user.js
 [.packagizer]: ../../raw/master/Kissanime-Downloader.packagizer
-[kissanime]: http://kissanime.to/
+[kissanime]: http://kissanime.ru/
 [greasyfork]: https://greasyfork.org/scripts/20724-kissanime-downloader-with-jdownloader/code/Kissanime%20Downloader%20with%20Jdownloader.user.js
