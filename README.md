@@ -24,7 +24,9 @@ Download an entire anime series with just a few button presses. Supports many di
   <img src="https://cloud.githubusercontent.com/assets/6453306/16174413/3c57d666-35c1-11e6-9a14-718e16d31630.png" width=425px>
   <img src="https://cloud.githubusercontent.com/assets/6453306/16174442/607bca6a-35c2-11e6-8b46-b1ab25869076.png" width=425px>
 </p>
+
 ![packagizer](https://cloud.githubusercontent.com/assets/6453306/16174827/24d95554-35d6-11e6-9929-9aba4f89a37b.gif)
+
 # Usage
 ###### 1. Visit [KissAnime.ru][kissanime]
 ###### 2. Click on **Download with JDownloader**
