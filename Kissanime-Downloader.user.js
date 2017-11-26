@@ -13,10 +13,12 @@
 
 // Adds the CSS for button formatting
 var maincolor = window.getComputedStyle ( document.querySelector ( '.bigChar' ) ).color;
-GM_addStyle('#myButton{z-index:222;cursor:pointer;position:relative;margin-right:15px;background-color:transparent;outline:0;border:none;\n' +
-'display:inline-block;text-decoration:none;font:400 27px Tahoma,Arial,Helvetica,sans-serif;transition-duration:.4s;border-radius:4px;\n' +
-'color:' + maincolor + '}#myButton:hover{color:#000;background-color:' + maincolor + '}#myButtonContainer{text-align:center}');
-
+var css = document.createElement("style");
+css.type = "text/css";
+css.innerHTML = "#myButton{z-index:222;cursor:pointer;position:relative;margin-right:15px;background-color:transparent;outline:0;border:none;\n" +
+"display:inline-block;text-decoration:none;font:400 27px Tahoma,Arial,Helvetica,sans-serif;transition-duration:.4s;border-radius:4px;\n" +
+"color:" + maincolor + "}#myButton:hover{color:#000;background-color:" + maincolor + "}#myButtonContainer{text-align:center}" ;
+document.body.appendChild(css);
 // Adds the button to the page
 let container = document.createElement ( 'div' );
 container.setAttribute ( 'id', 'myButtonContainer' );
