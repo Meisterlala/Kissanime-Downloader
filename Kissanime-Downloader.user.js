@@ -4,8 +4,8 @@
 // @version      v2.0.0
 // @description  Adds Download Button
 // @author       Meisterlala
-// @include      */kissanime.*/Anime/*
-// @exclude      */kissanime.*/Anime/*/*
+// @include      *//kissanime.*/Anime/*
+// @include      *//kissanime.*/Anime/*/*
 // @grant        GM.setClipboard
 // @grant        GM.addStyle
 // @noframes
@@ -35,8 +35,17 @@ containerContainer.appendChild ( container );
 
 // Activate the added button
 button.addEventListener ( 'click', function ( ) {
-    GM.setClipboard ( Array.prototype.slice.call ( document.querySelectorAll ( '.episodeList a[href*=Episode]' ) )
-                     .map ( elem => document.location.protocol + '//' + document.location.hostname + elem.getAttribute ( 'href' ) )
-                     .reverse ( )
-                     .join ( '\n' ) );
+  let links = '';
+  if (location.hostname.slice( 10 ) == 'ac') {
+  	links = Array.prototype.slice.call ( document.querySelectorAll ( '.episodeList a[href*=Episode]' ) )
+    	.map ( elem => elem.getAttribute ( 'href' ) )
+    	.reverse ( )
+     	.join ( '\n' );
+  } else {
+  	links = Array.prototype.slice.call ( document.querySelectorAll ( '.episodeList a[href*=Episode]' ) )
+    	.map ( elem => document.location.protocol + '//' + document.location.hostname + elem.getAttribute ( 'href' ) )
+      .reverse( )
+      .join( '\n' );
+  }    
+  GM.setClipboard( links );
 }, false );
