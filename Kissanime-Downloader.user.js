@@ -6,8 +6,8 @@
 // @author       Meisterlala
 // @include      */kissanime.*/Anime/*
 // @exclude      */kissanime.*/Anime/*/*
-// @grant        GM_setClipboard
-// @grant        GM_addStyle
+// @grant        GM.setClipboard
+// @grant        GM.addStyle
 // @noframes
 // ==/UserScript==
 
@@ -35,7 +35,7 @@ containerContainer.appendChild ( container );
 
 // Activate the added button
 button.addEventListener ( 'click', function ( ) {
-    GM_setClipboard ( Array.prototype.slice.call ( document.querySelectorAll ( '.episodeList a[href*=Episode]' ) )
+    GM.setClipboard ( Array.prototype.slice.call ( document.querySelectorAll ( '.episodeList a[href*=Episode]' ) )
                      .map ( elem => document.location.protocol + '//' + document.location.hostname + elem.getAttribute ( 'href' ) )
                      .reverse ( )
                      .join ( '\n' ) );
